@@ -1,5 +1,6 @@
 package com.slash.batterychargelimit;
 
+import android.app.DialogFragment;
 import android.content.*;
 import android.content.pm.PackageManager;
 import android.content.res.Resources;
@@ -305,5 +306,15 @@ public class MainActivity extends AppCompatActivity {
     public void onRestart() {
         super.onRestart();
         registerReceiver(charging, new IntentFilter(Intent.ACTION_BATTERY_CHANGED));
+    }
+
+    /**
+     * This is a dynamically bound event handler for the time picker button
+     *
+     * @param view The time picker trigger button
+     */
+    public void showTimePickerDialog(View view) {
+        DialogFragment newFragment = new TimePickerFragment();
+        newFragment.show(getFragmentManager(), "timePicker");
     }
 }

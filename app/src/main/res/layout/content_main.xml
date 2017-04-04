@@ -166,4 +166,10 @@
         android:layout_marginBottom="16dp"
         android:layout_below="@+id/auto_stats_reset" />
 
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pick a time"
+            android:onClick="showTimePickerDialog" />
+
 </RelativeLayout>
